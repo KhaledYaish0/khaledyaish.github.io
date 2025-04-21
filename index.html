@@ -8,6 +8,7 @@
   <style>
     * {
       scroll-behavior: smooth;
+      box-sizing: border-box;
     }
     body {
       margin: 0;
@@ -23,12 +24,13 @@
     header {
       background-color: #0a192f;
       color: white;
-      padding: 40px 20px;
+      padding: 40px 20px 60px;
       text-align: center;
+      position: relative;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.8em;
       animation: slideDown 0.7s ease-out;
     }
     header p {
@@ -42,11 +44,11 @@
     }
     main {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 60px 20px;
     }
     .section {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
       animation: fadeInUp 1s ease-in-out;
     }
     @keyframes fadeInUp {
@@ -55,8 +57,17 @@
     }
     h2 {
       color: #0a192f;
-      font-size: 1.8em;
-      margin-bottom: 10px;
+      font-size: 2em;
+      margin-bottom: 16px;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #0077cc;
+      margin-top: 6px;
     }
     a {
       color: #0077cc;
@@ -70,25 +81,28 @@
     }
     ul {
       padding-left: 20px;
+      line-height: 1.7em;
     }
     .profile-img {
       display: block;
-      margin: 20px auto;
+      margin: 0 auto 20px;
       border-radius: 50%;
-      width: 140px;
-      height: 140px;
+      width: 160px;
+      height: 160px;
       object-fit: cover;
       border: 4px solid #0077cc;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
     }
     .cv-button {
       display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
+      margin-top: 25px;
+      padding: 12px 24px;
       background-color: #0077cc;
       color: white;
       border-radius: 6px;
       text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
       transition: background-color 0.3s ease;
     }
     .cv-button:hover {
@@ -98,15 +112,15 @@
 </head>
 <body>
   <header>
-    <img src="WhatsApp Image 2024-10-06 at 11.16.50 PM.jpeg" alt="Khaled Yaish" class="profile-img">
+    <img src="WhatsApp%20Image%202024-10-06%20at%2011.16.50%20PM.jpeg" alt="Khaled Yaish" class="profile-img">
     <h1>Khaled Yaish</h1>
     <p>Computer Engineer | Full Stack Developer | Founder of BearBulk</p>
-    <a class="cv-button" href="/CV2025.pdf" download>Download CV</a>
+    <a class="cv-button" href="CV2025.pdf" download>📄 Download My CV</a>
   </header>
   <main>
     <section class="section">
       <h2>About Me</h2>
-      <p>I'm a Computer Engineering student at An-Najah National University, expected to graduate in August 2025. I specialize in full-stack web development, embedded systems, and scalable software solutions. I am passionate about building technology that solves real-world problems and makes everyday life easier.</p>
+      <p>I’m a passionate Computer Engineering student at An-Najah National University, graduating in August 2025. With deep interest in building digital systems and scalable platforms, I’ve led and developed full-stack solutions for real-world problems, especially in e-commerce and education sectors.</p>
     </section>
 
     <section class="section">
@@ -115,39 +129,39 @@
         <li>Frontend: React.js, Next.js, Tailwind CSS, HTML/CSS</li>
         <li>Backend: Node.js, Express.js, MongoDB</li>
         <li>Version Control: Git & GitHub</li>
-        <li>Other: RESTful APIs, UI/UX Design, Project Management</li>
+        <li>Other: RESTful APIs, UI/UX Design, Software Architecture, Agile Development</li>
       </ul>
     </section>
 
     <section class="section">
       <h2>Projects</h2>
       <ul>
-        <li><strong>BearBulk:</strong> A sportswear e-commerce platform targeting the Palestinian market. Developed the full website and handled branding, product management, and logistics.</li>
-        <li><strong>Memzy:</strong> A smart management system for educational institutions. Includes a dashboard for administrators, student/parent engagement tools, and AI-powered photo recognition.</li>
-        <li><strong>Gym Center Website:</strong> Developed a full website for a local gym with schedule management and membership features.</li>
+        <li><strong>BearBulk:</strong> Full-stack e-commerce platform selling sportswear. I handled product design, branding, logistics, and built the website from scratch.</li>
+        <li><strong>Memzy:</strong> Education management system featuring AI-powered image recognition, student/parent dashboards, and communication tools. Deployed in partnership with local institutions.</li>
+        <li><strong>Gym Center Platform:</strong> A responsive site for a fitness center with membership and schedule management functionalities.</li>
       </ul>
     </section>
 
     <section class="section">
       <h2>Certifications & Achievements</h2>
       <ul>
-        <li>Certified in Project Management</li>
-        <li>Recognized by IEEE for student activities and technical contributions</li>
-        <li>Participant in NASA Space Apps Challenge</li>
-        <li>Intern at Ministry of Telecommunications and IT (MTIT) in Ramallah</li>
+        <li>Certified in Project Management (2023)</li>
+        <li>Honored by IEEE for student leadership and outreach activities</li>
+        <li>Participant, NASA Space Apps Challenge</li>
+        <li>Internship at Ministry of Telecommunications and IT – Ramallah (Full-stack development)</li>
       </ul>
     </section>
 
     <section class="section">
       <h2>Languages</h2>
-      <p>Fluent in Arabic and English</p>
+      <p>Native Arabic speaker, fluent in English</p>
     </section>
 
     <section class="section links">
       <h2>Links</h2>
-      <p><a href="https://www.linkedin.com/in/khaled-yaish-34338115a" target="_blank">LinkedIn</a></p>
+      <p><a href="https://www.linkedin.com/in/khaledyaish" target="_blank">LinkedIn</a></p>
       <p><a href="https://github.com/KhaledYaish0" target="_blank">GitHub</a></p>
-      <p><a href="mailto:khaled@example.com">Email Me</a></p>
+      <p><a href="mailto:khaledyaishkhy@gmail.com">Email Me</a></p>
     </section>
   </main>
 </body>
