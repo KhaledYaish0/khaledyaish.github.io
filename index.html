@@ -1,166 +1,233 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Khaled Yaish | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       scroll-behavior: smooth;
     }
+
     body {
-      margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f5f7fa;
       color: #333;
-      animation: fadeIn 1s ease-in;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+
     header {
       background-color: #0a192f;
-      color: white;
-      padding: 40px 20px;
+      color: #fff;
+      padding: 60px 20px 30px;
       text-align: center;
     }
+
+    header img {
+      border-radius: 50%;
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #0077cc;
+    }
+
     header h1 {
-      margin: 0;
       font-size: 2.5em;
-      animation: slideDown 0.7s ease-out;
     }
+
     header p {
-      margin-top: 10px;
-      font-size: 1.2em;
       color: #a8b2d1;
+      margin-top: 8px;
     }
-    @keyframes slideDown {
-      from { transform: translateY(-20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 999;
     }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 12px;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #0a192f;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #0077cc;
+    }
+
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
-    .section {
-      margin-bottom: 40px;
-      animation: fadeInUp 1s ease-in-out;
+
+    section {
+      margin-bottom: 60px;
+      animation: fadeInUp 1s ease;
     }
+
+    h2 {
+      font-size: 1.8em;
+      color: #0a192f;
+      margin-bottom: 15px;
+    }
+
+    p, li {
+      font-size: 1.05em;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    h2 {
-      color: #0a192f;
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .profile-img {
-      display: block;
-      margin: 20px auto;
-      border-radius: 50%;
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border: 4px solid #0077cc;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    .cv-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #0077cc;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-    .cv-button:hover {
-      background-color: #005fa3;
-    }
-    .links ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .links li {
-      margin-bottom: 12px;
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="WhatsApp Image 2024-10-06 at 11.16.50 PM.jpeg" alt="Khaled Yaish" class="profile-img">
-    <h1>Khaled Yaish</h1>
-    <p>Computer Engineer | Full Stack Developer | Founder of BearBulk</p>
-    <a class="cv-button" href="CV2025.pdf" download>📄 Download CV</a>
-  </header>
 
-  <main>
-    <section class="section">
-      <h2>👨‍💼 About Me</h2>
-      <p>I’m a senior Computer Engineering student at An-Najah National University (Graduating Aug 2025). I specialize in full-stack development, scalable systems, and embedded solutions. I’m passionate about building real-world tech that makes life easier.</p>
-    </section>
+<header>
+  <img src="profile.jpg" alt="Khaled Yaish">
+  <h1>Khaled Yaish</h1>
+  <p>Computer Engineer | Full-Stack Developer | E-Commerce Innovator</p>
+</header>
 
-    <section class="section">
-      <h2>🛠️ Skills</h2>
-      <ul>
-        <li>Frontend: React.js, Next.js, Tailwind CSS, HTML/CSS</li>
-        <li>Backend: Node.js, Express.js, MongoDB</li>
-        <li>Tools: Git, GitHub, REST APIs, UI/UX Design</li>
-      </ul>
-    </section>
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#volunteering">Volunteering</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <section class="section">
-      <h2>💼 Experience</h2>
-      <ul>
-        <li><strong>Founder of BearBulk:</strong> Sportswear e-commerce for local market. Built full platform, managed marketing and logistics.</li>
-        <li><strong>Intern @ MTIT, Ramallah:</strong> Worked on full-stack web apps for internal government services using React & MongoDB.</li>
-        <li><strong>Gym Center Website:</strong> Built full site with booking & membership management.</li>
-      </ul>
-    </section>
+<main>
+  <section id="about">
+    <h2>👨‍💻 About Me</h2>
+    <p>
+      Passionate Computer Engineer with hands-on experience in full-stack development
+      using <strong>React.js</strong>, <strong>Node.js</strong>, and <strong>Flutter</strong>.
+      I’ve launched multiple online businesses including BearBulk, where I managed everything from UI/UX design to backend systems.
+      My focus is on scalable web applications, cybersecurity, and meaningful tech solutions.
+    </p>
+  </section>
 
-    <section class="section">
-      <h2>🎓 Certifications</h2>
-      <ul>
-        <li>Certified in Project Management</li>
-        <li>IEEE Certificate of Contribution – Technical & Volunteer Service</li>
-      </ul>
-    </section>
+  <section id="skills">
+    <h2>🛠️ Technical Skills</h2>
+    <ul>
+      <li><strong>Web & Mobile:</strong> React.js, Node.js, Flutter, HTML, CSS</li>
+      <li><strong>Programming:</strong> JavaScript, Python, Java, C++, C, Dart, PHP</li>
+      <li><strong>Databases:</strong> MongoDB, SQL Server, Firebase, Oracle</li>
+      <li><strong>Tools:</strong> Git, GitHub, Excel, Word, Firebase</li>
+      <li><strong>Other:</strong> AUTOCAD, 3D Printing</li>
+      <li><strong>OS:</strong> Windows, macOS</li>
+    </ul>
+  </section>
 
-    <section class="section">
-      <h2>🤝 Volunteering</h2>
-      <ul>
-        <li>Lead coding mentor at Let's Code – trained over 300 students</li>
-        <li>Participant in NASA Space Apps Challenge</li>
-      </ul>
-    </section>
+  <section id="experience">
+    <h2>💼 Professional Experience</h2>
+    <ul>
+      <li><strong>Founder & Owner – BearBulk (2024–Now):</strong><br>
+      Developed full e-commerce platform, managed marketing, logistics, and product lifecycle.</li>
+      <li><strong>Online Business Manager (2024–Now):</strong><br>
+      Launched and optimized multiple websites focusing on UX and conversion rate improvement.</li>
+      <li><strong>Ministry of Telecom & IT (2023):</strong><br>
+      Built full-stack Sales Management System (React, Node, MongoDB), with responsive UI and REST APIs.</li>
+      <li><strong>Ministry of Tourism – Web Developer (2023):</strong><br>
+      Built a responsive web platform using HTML, CSS, JS, and PHP.</li>
+    </ul>
+  </section>
 
-    <section class="section">
-      <h2>🌍 Languages</h2>
-      <p>Fluent in Arabic 🇵🇸 and English 🇺🇸</p>
-    </section>
+  <section id="projects">
+    <h2>📂 Projects & Hackathons</h2>
+    <ul>
+      <li><strong>Nasa Space Apps Challenge:</strong> 1st Place Nationally – Developed an innovative space solution in 48h.</li>
+      <li><strong>BearBulk:</strong> Complete e-commerce business built from scratch.</li>
+      <li><strong>Memzy:</strong> Smart educational platform for administrative and student interaction.</li>
+    </ul>
+  </section>
 
-    <section class="section links">
-      <h2>🌐 Professional Links</h2>
-      <ul>
-        <li>🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/khaledyaish" target="_blank">linkedin.com/in/khaledyaish</a></li>
-        <li>💻 <strong>GitHub:</strong> <a href="https://github.com/KhaledYaish0" target="_blank">github.com/KhaledYaish0</a></li>
-        <li>📧 <strong>Email:</strong> <a href="mailto:khaledyaishkhy@gmail.com">khaledyaishkhy@gmail.com</a></li>
-      </ul>
-    </section>
-  </main>
+  <section id="volunteering">
+    <h2>🤝 Volunteering</h2>
+    <ul>
+      <li><strong>President – Arab Innovation Network (2023–2024):</strong><br>
+      Led the branch at An-Najah, organized hackathons with 500+ participants.</li>
+      <li><strong>Let’s Code Center (2015–2020):</strong><br>
+      Coding trainer – taught 100+ children programming and logic building.</li>
+      <li><strong>INJAZ Palestine (2023):</strong><br>
+      Participated in entrepreneurship and mentoring programs for youth.</li>
+      <li><strong>IEEE Member (2021–2023):</strong><br>
+      Competed in IEEEXtreme 16.0 & 17.0, represented university in global contests.</li>
+    </ul>
+  </section>
+
+  <section id="certifications">
+    <h2>🎓 Certifications</h2>
+    <ul>
+      <li>Udacity – Intro to Machine Learning with TensorFlow (2025)</li>
+      <li>Fortinet Certified Fundamentals & Associate in Cybersecurity</li>
+      <li>PMI – Project Management Certificate</li>
+      <li>Design Thinking, Business Model Canvas, Marketing Plan</li>
+      <li>IEEEXtreme 17.0 – 3rd @ Uni, 8th Nationally</li>
+      <li>Holy Quran – Full Memorization</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="links">
+    <h2>📬 Contact & Links</h2>
+    <ul style="list-style: none; padding-left: 0;">
+      <li style="margin-bottom: 12px;">
+        📧 <strong>Email:</strong> <a href="mailto:khaledyaishkhy@gmail.com">khaledyaishkhy@gmail.com</a>
+      </li>
+      <li style="margin-bottom: 12px;">
+        ☎️ <strong>Phone:</strong> <a href="tel:+972597728233">+972 59-772-8233</a>
+      </li>
+      <li style="margin-bottom: 12px;">
+        🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/khaled-yaish-34338115a" target="_blank">linkedin.com/in/khaled-yaish</a>
+      </li>
+      <li style="margin-bottom: 12px;">
+        💻 <strong>GitHub:</strong> <a href="https://github.com/KhaledYaish0" target="_blank">github.com/KhaledYaish0</a>
+      </li>
+    </ul>
+  </section>
+</main>
 </body>
 </html>
