@@ -6,11 +6,19 @@
   <title>Khaled Yaish | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #f4f4f4;
       color: #333;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     header {
       background-color: #0a192f;
@@ -21,11 +29,16 @@
     header h1 {
       margin: 0;
       font-size: 2.5em;
+      animation: slideDown 0.7s ease-out;
     }
     header p {
       margin-top: 10px;
       font-size: 1.2em;
       color: #a8b2d1;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
     main {
       max-width: 900px;
@@ -34,6 +47,11 @@
     }
     .section {
       margin-bottom: 40px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     h2 {
       color: #0a192f;
@@ -53,12 +71,37 @@
     ul {
       padding-left: 20px;
     }
+    .profile-img {
+      display: block;
+      margin: 20px auto;
+      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border: 4px solid #0077cc;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .cv-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .cv-button:hover {
+      background-color: #005fa3;
+    }
   </style>
 </head>
 <body>
   <header>
+    <img src="https://via.placeholder.com/140" alt="Khaled Yaish" class="profile-img">
     <h1>Khaled Yaish</h1>
     <p>Computer Engineer | Full Stack Developer | Founder of BearBulk</p>
+    <a class="cv-button" href="/Khaled_Yaish_CV.pdf" download>Download CV</a>
   </header>
   <main>
     <section class="section">
